@@ -19,7 +19,7 @@ uv run pypodcastde mine --try        # See what would download.
 uv run pypodcastde mine              # Download it.
 ```
 
-Use Python 3.11 or newer. Video downloads also need `ffmpeg` and `ffprobe` on your PATH. The first run can download a show's entire back catalogue.
+Use Python 3.11 or newer. For a native install, video downloads need `ffmpeg` and `ffprobe` on your PATH. The Docker image includes both; you don't need to install them on the host. The first run can download a show's entire back catalogue.
 
 ## Choose where episodes go
 
