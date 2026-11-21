@@ -12,6 +12,17 @@ One of the best things about German public broadcasting is how seriously it take
 
 pypodcastde keeps those favourites in one folder, ready for a car ride or bedtime. Podcasts keep their original audio format; for video shows, it saves the soundtrack as an MP3. This is an independent tool, not an ARD app.
 
+All eight shows in the [starter list](locations_example.txt) have been tested with pypodcastde:
+
+* Checkerin Marina ([CHECK IN – Marinas Rätsel-Abenteuer](https://www.ardmediathek.de/sendung/check-in-marinas-raetsel-abenteuer/Y3JpZDovL2JyLmRlL2Jyb2FkY2FzdFNlcmllcy9TMjAyNVdPMDEzNDAxQTA), video soundtrack)
+* Checker Tobi ([CheckPod – Der Podcast mit Checker Tobi](https://www.ardsounds.de/sendung/checkpod-der-podcast-mit-checker-tobi/urn:ard:show:2af809299201a921/))
+* Alle gegen Nico ([Zockt um die Quizkrone!](https://www.ardsounds.de/sendung/alle-gegen-nico-zockt-um-die-quizkrone/urn:ard:show:0305ba2e345adbb5/))
+* Tina und Mischa ([Lachlabor](https://www.ardsounds.de/sendung/lachlabor/urn:ard:show:cfb9386906103b4a/))
+* Anna ([Anna und die wilden Tiere – der Podcast](https://www.ardsounds.de/sendung/anna-und-die-wilden-tiere-der-podcast/urn:ard:show:8530c5d73f93f021/))
+* Die Maus ([Die Maus zum Hören](https://www.ardsounds.de/sendung/die-maus-zum-hoeren/urn:ard:show:b4a27641ebfcb11b/))
+* Deutschlandfunk Kultur ([Kakadu – Der Kinderpodcast](https://www.ardsounds.de/sendung/kakadu-der-kinderpodcast-deutschlandfunk-kultur/urn:ard:show:30c22e3f2fc00769/))
+* rbb ([Ohrenbär](https://www.ardsounds.de/sendung/ohrenbaer/urn:ard:show:7d4e6af8e64fee8e/))
+
 ## Your first download
 
 **Install from [PyPI](https://pypi.org/project/pypodcastde/)** in a Python 3.11+ virtual environment. No source checkout is needed. For video shows, install `ffmpeg` and `ffprobe` too.
