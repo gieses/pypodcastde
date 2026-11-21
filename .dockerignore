@@ -1,0 +1,9 @@
+*
+!Dockerfile
+!pyproject.toml
+!locations_example.txt
+!pypodcastde/
+!pypodcastde/*.py
+pypodcastde/__pycache__/
+**/locations_local.txt
+**/locations.txt

@@ -1,0 +1,9 @@
+Podcast Name;Location;URL
+Checker Tobi;podcasts/Checker_Tobi;https://www.ardsounds.de/sendung/checkpod-der-podcast-mit-checker-tobi/urn:ard:show:2af809299201a921/
+Checkerin Marina;podcasts/Checkerin_Marina;https://www.ardmediathek.de/sendung/check-in-marinas-raetsel-abenteuer/Y3JpZDovL2JyLmRlL2Jyb2FkY2FzdFNlcmllcy9TMjAyNVdPMDEzNDAxQTA
+Alle Gegen Nico;podcasts/Alle-gegen-Nico;https://www.ardsounds.de/sendung/alle-gegen-nico-zockt-um-die-quizkrone/urn:ard:show:0305ba2e345adbb5/
+Lachlabor;podcasts/Lachlabor;https://www.ardsounds.de/sendung/lachlabor/urn:ard:show:cfb9386906103b4a/
+Anna und die wilden Tiere;podcasts/Anna_und_die_wilden_Tiere;https://www.ardsounds.de/sendung/anna-und-die-wilden-tiere-der-podcast/urn:ard:show:8530c5d73f93f021/
+Die Maus zum Hören;podcasts/Die_Maus_zum_Hoeren;https://www.ardsounds.de/sendung/die-maus-zum-hoeren/urn:ard:show:b4a27641ebfcb11b/
+Kakadu;podcasts/Kakadu;https://www.ardsounds.de/sendung/kakadu-der-kinderpodcast-deutschlandfunk-kultur/urn:ard:show:30c22e3f2fc00769/
+Ohrenbär;podcasts/Ohrenbaer;https://www.ardsounds.de/sendung/ohrenbaer/urn:ard:show:7d4e6af8e64fee8e/

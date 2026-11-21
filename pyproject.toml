@@ -1,0 +1,36 @@
+[project]
+name = "pypodcastde"
+version = "0.1.0"
+description = "Update a local library of ARD podcasts and video soundtracks"
+requires-python = ">=3.11"
+dependencies = ["loguru>=0.7.3", "yt-dlp>=2026.3.17"]
+
+[project.scripts]
+pypodcastde = "pypodcastde.cli:main"
+
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel.force-include]
+"locations_example.txt" = "pypodcastde/locations_example.txt"
+
+[tool.hatch.build.targets.sdist]
+include = ["/pypodcastde", "/locations_example.txt", "/README.md", "/pyproject.toml"]
+
+[tool.hatch.build]
+exclude = ["**/locations_local.txt", "**/locations.txt"]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.2",
+    "ruff>=0.7",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+force-exclude = true
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "B", "UP"]
