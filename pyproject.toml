@@ -24,8 +24,12 @@ exclude = ["**/locations_local.txt", "**/locations.txt"]
 [dependency-groups]
 dev = [
     "pre-commit>=4.2",
+    "pytest>=8",
     "ruff>=0.7",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
 
 [tool.ruff]
 target-version = "py311"

@@ -56,3 +56,5 @@ docker compose build --pull && docker compose up -d
 ```
 
 For development, `make help` lists the commands. `make check` runs Ruff and the offline tests; `make hooks` installs the Git pre-commit hook.
+
+GitHub Actions runs pytest on Linux and Windows with Python 3.11 and 3.14 for every push and pull request. To run the same tests locally: `uv run --locked pytest -q`.
