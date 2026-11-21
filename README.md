@@ -2,6 +2,7 @@
 
 # pypodcastde
 
+[![PyPI version](https://img.shields.io/pypi/v/pypodcastde?logo=pypi&logoColor=white)](https://pypi.org/project/pypodcastde/)
 [![CI tests](https://github.com/gieses/pypodcastde/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/gieses/pypodcastde/actions/workflows/ci.yml?query=branch%3Amain)
 [![Minimum line coverage: 70%](https://img.shields.io/badge/coverage%20floor-70%25-39824a)](pyproject.toml)
 [![Python 3.11 and newer](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](pyproject.toml)
@@ -13,7 +14,17 @@ pypodcastde keeps those favourites in one folder, ready for a car ride or bedtim
 
 ## Your first download
 
-You'll need Python 3.11+ and [uv](https://docs.astral.sh/uv/). For video shows, install `ffmpeg` and `ffprobe` too. From the project folder:
+**Install from [PyPI](https://pypi.org/project/pypodcastde/)** in a Python 3.11+ virtual environment. No source checkout is needed. For video shows, install `ffmpeg` and `ffprobe` too.
+
+```bash
+python -m pip install pypodcastde
+pypodcastde init-config              # Creates locations_local.txt here.
+# Edit locations_local.txt to pick shows and folders.
+pypodcastde mine --try               # Preview before downloading.
+pypodcastde mine
+```
+
+**Working from a source checkout instead?** Run these commands from the project folder with [uv](https://docs.astral.sh/uv/):
 
 ```bash
 uv sync --locked
