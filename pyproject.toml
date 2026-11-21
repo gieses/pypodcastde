@@ -25,6 +25,7 @@ exclude = ["**/locations_local.txt", "**/locations.txt"]
 dev = [
     "pre-commit>=4.2",
     "pytest>=8",
+    "pytest-cov>=6",
     "ruff>=0.7",
 ]
 

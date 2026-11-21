@@ -1,5 +1,10 @@
 # pypodcastde
 
+[![CI tests](https://github.com/gieses/pypodcastde/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/gieses/pypodcastde/actions/workflows/ci.yml?query=branch%3Amain)
+[![Minimum line coverage: 70%](https://img.shields.io/badge/coverage%20floor-70%25-39824a)](.github/workflows/ci.yml)
+[![Python 3.11 and newer](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](pyproject.toml)
+[![Docker Compose](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](compose.example.yaml)
+
 Save ARD podcasts to a folder on your computer or NAS. Audio shows keep their original format. For video shows, such as Checkerin Marina, the crawler saves the soundtrack as an MP3.
 
 ## TL;DR: download missing episodes
