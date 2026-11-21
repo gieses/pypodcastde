@@ -67,3 +67,10 @@ docker compose build --pull && docker compose up -d
 See the [changelog](CHANGELOG.md) for release notes. If you're working on the code, `make check` runs lint and tests; `make help` lists the other commands.
 
 Run `make hooks` once to enable pre-commit checks, or `make pre-commit` to check the whole tree. Use `uv add` (or `uv add --dev`) for dependency changes and commit `uv.lock`. CI and Docker use the locked versions.
+
+### Publish a release
+
+Run `make publish-check` to build the current version and check it without uploading.
+Use `make publish-test` for TestPyPI or `make publish` for the real PyPI.
+For uploads, set `UV_PUBLISH_TOKEN` through your shell or secret manager using a token
+for that index. Never commit a token. PyPI won't replace an existing release file.

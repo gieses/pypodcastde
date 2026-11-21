@@ -2,8 +2,10 @@
 UV ?= uv
 RUN = $(UV) run --locked
 ARGS ?=
+VERSION = $(shell $(UV) version --short)
+RELEASE_FILES = dist/pypodcastde-$(VERSION)-py3-none-any.whl dist/pypodcastde-$(VERSION).tar.gz
 
-.PHONY: help setup lint format format-check test check hooks pre-commit build preview mine schedule
+.PHONY: help setup lint format format-check test check hooks pre-commit build publish-check publish-test publish preview mine schedule
 
 help:
 	@echo "pypodcastde - developer and crawler commands"
@@ -16,6 +18,9 @@ help:
 	@echo "  make hooks         Install the Git pre-commit hook in this checkout"
 	@echo "  make pre-commit    Run hooks against all tracked files"
 	@echo "  make build         Build the source distribution and wheel"
+	@echo "  make publish-check Build and check the release without uploading"
+	@echo "  make publish-test  Build and upload the current version to TestPyPI"
+	@echo "  make publish       Build and upload the current version to PyPI"
 	@echo "  make preview       Preview a crawl without downloading"
 	@echo "  make mine          Download missing episodes"
 	@echo "  make schedule      Run the daily crawler in the foreground"
@@ -49,6 +54,15 @@ pre-commit:
 build:
 	$(UV) lock --check
 	$(UV) build
+
+publish-check: build
+	$(UV) publish --dry-run --trusted-publishing never $(RELEASE_FILES)
+
+publish-test: build
+	$(UV) publish --publish-url https://test.pypi.org/legacy/ $(RELEASE_FILES)
+
+publish: build
+	$(UV) publish --publish-url https://upload.pypi.org/legacy/ $(RELEASE_FILES)
 
 preview:
 	$(RUN) pypodcastde mine --try $(ARGS)
