@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">pypodcastde</title>
+  <desc id="desc">A smiling orange cassette wears teal headphones. Two purple notes float beside it.</desc>
+  <rect x="4" y="4" width="232" height="232" rx="54" fill="#fff2d5"/>
+  <ellipse cx="120" cy="194" rx="66" ry="7" fill="#edd9b4"/>
+  <g stroke="#263653" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M48 133v-16a72 72 0 0 1 144 0v16h-13v-16a59 59 0 0 0-118 0v16z" fill="#54cbbc"/>
+    <rect x="49" y="93" width="142" height="94" rx="19" fill="#ffa15f"/>
+    <rect x="61" y="104" width="118" height="52" rx="17" fill="#fff7e9"/>
+    <path d="M72 186l10-20h76l10 20z" fill="#ffd28f"/>
+    <g fill="#52c6b8">
+      <rect x="34" y="116" width="20" height="42" rx="9"/>
+      <rect x="186" y="116" width="20" height="42" rx="9"/>
+    </g>
+    <path d="M109 134q11 14 22 0" fill="none"/>
+  </g>
+  <g fill="#263653">
+    <circle cx="86" cy="126" r="8"/><circle cx="154" cy="126" r="8"/>
+    <circle cx="89" cy="177" r="3"/><circle cx="151" cy="177" r="3"/>
+  </g>
+  <g fill="#fff"><circle cx="88" cy="123" r="2.5"/><circle cx="156" cy="123" r="2.5"/></g>
+  <g fill="#f68981"><ellipse cx="80" cy="140" rx="7" ry="3"/><ellipse cx="160" cy="140" rx="7" ry="3"/></g>
+  <g fill="#7552a3" transform="rotate(9 189 54)">
+    <path d="M180 64V41l23-7v24h-4V42l-15 5v17z"/>
+    <ellipse cx="178" cy="64" rx="6" ry="4.5"/><ellipse cx="197" cy="58" rx="6" ry="4.5"/>
+  </g>
+  <path d="M45 62q0 9-8 11 8 2 8 11 2-9 9-11-7-2-9-11z" fill="#df9441"/>
+</svg>

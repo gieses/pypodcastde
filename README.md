@@ -1,3 +1,5 @@
+<img src="assets/logo.svg" alt="A smiling cassette in teal headphones with floating musical notes" width="150" height="150">
+
 # pypodcastde
 
 [![CI tests](https://github.com/gieses/pypodcastde/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/gieses/pypodcastde/actions/workflows/ci.yml?query=branch%3Amain)
