@@ -1,6 +1,6 @@
 [project]
 name = "pypodcastde"
-version = "0.1.0"
+version = "0.1.1"
 description = "Update a local library of ARD podcasts and video soundtracks"
 readme = "README.md"
 requires-python = ">=3.11"
