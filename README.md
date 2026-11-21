@@ -7,13 +7,13 @@
 [![Python 3.11 and newer](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](pyproject.toml)
 [![Docker Compose](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](compose.example.yaml)
 
-Save ARD podcasts to a folder on your computer or NAS. Audio shows keep their original format. For video shows, such as Checkerin Marina, the crawler saves the soundtrack as an MP3.
+One of the best things about German public broadcasting is how seriously it takes kids’ questions. On [ARD Sounds](https://www.ardsounds.de/), *Lachlabor* tests them with real experiments, while *Ohrenbär* has stories for the quieter end of the day. Over in the [ARD Mediathek](https://www.ardmediathek.de/), Checkerin Marina solves puzzles on screen.
 
-See the [changelog](CHANGELOG.md) for release notes.
+pypodcastde keeps those favourites in one folder, ready for a car ride or bedtime. Podcasts keep their original audio format; for video shows, it saves the soundtrack as an MP3. This is an independent tool, not an ARD app.
 
-## Download missing episodes
+## Your first download
 
-From the project folder, with [uv](https://docs.astral.sh/uv/) installed:
+You'll need Python 3.11+ and [uv](https://docs.astral.sh/uv/). For video shows, install `ffmpeg` and `ffprobe` too. From the project folder:
 
 ```bash
 uv sync --locked
@@ -23,9 +23,9 @@ uv run pypodcastde mine --try        # See what would download.
 uv run pypodcastde mine              # Download it.
 ```
 
-Use Python 3.11 or newer. For a native install, video downloads need `ffmpeg` and `ffprobe` on your PATH. The Docker image includes both; you don't need to install them on the host. The first run can download a show's entire back catalogue.
+The first run can fetch a show's whole back catalogue. Later runs skip episodes you already have.
 
-## Choose where episodes go
+### Shows and folders
 
 [`locations_example.txt`](locations_example.txt) lists eight shows. Edit your **private copy**, `locations_local.txt`. Keep the header and separate the show name, folder, and URL with semicolons. Delete rows for shows you don't want.
 
@@ -37,9 +37,9 @@ Use Python 3.11 or newer. For a native install, video downloads need `ffmpeg` an
 
 The CLI looks for the private file in the current directory. Use `--config PATH` if you keep it elsewhere. To move the whole library without editing each row, use `--output-root DIR`: each show keeps its last folder name under `DIR`. Git ignores the private file and the default `podcasts/` folder.
 
-## Run daily on a Linux server
+## Daily downloads with Docker
 
-Install Docker with Compose. From the project folder:
+On a Linux server with Docker Compose, the image handles FFmpeg for you:
 
 ```bash
 mkdir -p config
@@ -53,7 +53,7 @@ docker compose logs -f crawler
 
 The crawler runs immediately, then every 24 hours. It rereads `config/locations_local.txt` each time. Each run ends with a count of successful and failed shows. `Ctrl+C` leaves the log viewer; `docker compose stop` stops the crawler. Downloads stay on the host.
 
-## Repairs and updates
+## Updating
 
 Use `mine --force --try` to preview a full re-download. Drop `--try` to replace existing episodes. Don't run two crawlers against the same folder at once.
 
@@ -64,6 +64,4 @@ uv sync --locked                                  # For a local install
 docker compose build --pull && docker compose up -d
 ```
 
-For development, `make help` lists the commands. `make check` runs Ruff and the offline tests; `make hooks` installs the Git pre-commit hook.
-
-GitHub Actions runs pytest on Linux and Windows with Python 3.11 and 3.14 for every push and pull request. To run the same tests locally: `uv run --locked pytest -q`.
+See the [changelog](CHANGELOG.md) for release notes. If you're working on the code, `make check` runs lint and tests; `make help` lists the other commands.
