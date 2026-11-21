@@ -7,7 +7,7 @@
 
 Save ARD podcasts to a folder on your computer or NAS. Audio shows keep their original format. For video shows, such as Checkerin Marina, the crawler saves the soundtrack as an MP3.
 
-## TL;DR: download missing episodes
+## Download missing episodes
 
 From the project folder, with [uv](https://docs.astral.sh/uv/) installed:
 
@@ -33,7 +33,7 @@ Use Python 3.11 or newer. For a native install, video downloads need `ffmpeg` an
 
 The CLI looks for the private file in the current directory. Use `--config PATH` if you keep it elsewhere. To move the whole library without editing each row, use `--output-root DIR`: each show keeps its last folder name under `DIR`. Git ignores the private file and the default `podcasts/` folder.
 
-## TL;DR: run daily on a Linux server
+## Run daily on a Linux server
 
 Install Docker with Compose. From the project folder:
 
