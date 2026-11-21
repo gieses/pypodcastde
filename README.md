@@ -7,6 +7,8 @@
 
 Save ARD podcasts to a folder on your computer or NAS. Audio shows keep their original format. For video shows, such as Checkerin Marina, the crawler saves the soundtrack as an MP3.
 
+See the [changelog](CHANGELOG.md) for release notes.
+
 ## Download missing episodes
 
 From the project folder, with [uv](https://docs.astral.sh/uv/) installed:

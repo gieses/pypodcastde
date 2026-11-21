@@ -16,7 +16,7 @@ build-backend = "hatchling.build"
 "locations_example.txt" = "pypodcastde/locations_example.txt"
 
 [tool.hatch.build.targets.sdist]
-include = ["/pypodcastde", "/locations_example.txt", "/README.md", "/pyproject.toml"]
+include = ["/pypodcastde", "/locations_example.txt", "/README.md", "/CHANGELOG.md", "/pyproject.toml"]
 
 [tool.hatch.build]
 exclude = ["**/locations_local.txt", "**/locations.txt"]
