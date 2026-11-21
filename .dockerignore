@@ -1,6 +1,8 @@
 *
 !Dockerfile
 !pyproject.toml
+!uv.lock
+!README.md
 !locations_example.txt
 !pypodcastde/
 !pypodcastde/*.py

@@ -1,6 +1,26 @@
 repos:
   - repo: local
     hooks:
+      - id: check-config
+        name: Check YAML syntax
+        entry: uv run --locked check-yaml
+        language: system
+        types: [yaml]
+      - id: check-toml
+        name: Check TOML syntax
+        entry: uv run --locked check-toml
+        language: system
+        types: [toml]
+      - id: check-merge-conflict
+        name: Check for conflict markers
+        entry: uv run --locked check-merge-conflict --assume-in-merge
+        language: system
+        types: [text]
+      - id: detect-private-key
+        name: Check for private keys
+        entry: uv run --locked detect-private-key
+        language: system
+        types: [text]
       - id: ruff-check
         name: Ruff lint
         entry: uv run --locked ruff check

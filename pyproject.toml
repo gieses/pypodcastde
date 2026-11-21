@@ -2,11 +2,17 @@
 name = "pypodcastde"
 version = "0.1.0"
 description = "Update a local library of ARD podcasts and video soundtracks"
+readme = "README.md"
 requires-python = ">=3.11"
 dependencies = ["loguru>=0.7.3", "yt-dlp>=2026.3.17"]
 
 [project.scripts]
 pypodcastde = "pypodcastde.cli:main"
+
+[project.urls]
+Repository = "https://github.com/gieses/pypodcastde"
+Issues = "https://github.com/gieses/pypodcastde/issues"
+Changelog = "https://github.com/gieses/pypodcastde/blob/main/CHANGELOG.md"
 
 [build-system]
 requires = ["hatchling>=1.25"]
@@ -16,7 +22,7 @@ build-backend = "hatchling.build"
 "locations_example.txt" = "pypodcastde/locations_example.txt"
 
 [tool.hatch.build.targets.sdist]
-include = ["/pypodcastde", "/locations_example.txt", "/README.md", "/CHANGELOG.md", "/pyproject.toml"]
+include = ["/pypodcastde", "/locations_example.txt", "/README.md", "/CHANGELOG.md", "/pyproject.toml", "/tests"]
 
 [tool.hatch.build]
 exclude = ["**/locations_local.txt", "**/locations.txt"]
@@ -24,6 +30,7 @@ exclude = ["**/locations_local.txt", "**/locations.txt"]
 [dependency-groups]
 dev = [
     "pre-commit>=4.2",
+    "pre-commit-hooks>=5",
     "pytest>=8",
     "pytest-cov>=6",
     "ruff>=0.7",
@@ -31,6 +38,11 @@ dev = [
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+addopts = "--strict-markers --strict-config"
+
+[tool.coverage.report]
+fail_under = 70
+show_missing = true
 
 [tool.ruff]
 target-version = "py311"

@@ -3,7 +3,7 @@
 # pypodcastde
 
 [![CI tests](https://github.com/gieses/pypodcastde/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/gieses/pypodcastde/actions/workflows/ci.yml?query=branch%3Amain)
-[![Minimum line coverage: 70%](https://img.shields.io/badge/coverage%20floor-70%25-39824a)](.github/workflows/ci.yml)
+[![Minimum line coverage: 70%](https://img.shields.io/badge/coverage%20floor-70%25-39824a)](pyproject.toml)
 [![Python 3.11 and newer](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)](pyproject.toml)
 [![Docker Compose](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)](compose.example.yaml)
 
@@ -65,3 +65,5 @@ docker compose build --pull && docker compose up -d
 ```
 
 See the [changelog](CHANGELOG.md) for release notes. If you're working on the code, `make check` runs lint and tests; `make help` lists the other commands.
+
+Run `make hooks` once to enable pre-commit checks, or `make pre-commit` to check the whole tree. Use `uv add` (or `uv add --dev`) for dependency changes and commit `uv.lock`. CI and Docker use the locked versions.

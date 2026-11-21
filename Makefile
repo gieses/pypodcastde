@@ -35,7 +35,7 @@ format-check:
 	$(RUN) ruff format --check pypodcastde tests
 
 test:
-	$(RUN) pytest -q
+	$(RUN) pytest -q --cov=pypodcastde
 
 check: lint format-check test
 	$(UV) lock --check
